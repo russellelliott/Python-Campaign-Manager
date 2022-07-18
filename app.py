@@ -32,4 +32,6 @@ while True:
 # 'Server ID' and [category] column respectively.
 col1 = "Server ID"
 for ind in df.index:
-    print(df[col1][ind], df[category][ind])
+    inCategory = df[category][ind]
+    if(inCategory):
+        print(df[col1][ind], inCategory) #display given server ID only if it's in that given category
