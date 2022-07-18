@@ -30,5 +30,7 @@ Using Python, this program will be able to send messages and posts across severa
 This program contains an `.env` file which contains the following
 - `ID`: ID for Google Sheet containing server IDs
     - Put in the `.env` file (hidden via the `.gitignore` file) for the sake of privacy.
+- `DEMO_ID`: ID for Discord channel to preview post before sending it.
+    - Put in the `.env` file (hidden via the `.gitignore` file) for the sake of privacy.
 - `AUTHORITY`: Authorization tag for Discord. Go to Discord on desktop, click f12, go to request headers -> authorization. This appears to work for any channel from what I can tell.
     - Also put in the `.env` file, although this varaible works for all servers.
