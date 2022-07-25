@@ -36,8 +36,15 @@ df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{id}/export?format=csv
 
 print(df) #print the dataframe
 
-columns = df.columns[3:] # Get column names
-#the way the sheet is designed, the items after column 3 are the categories
+columns = df.columns[4:] # Get column names
+
+#print the column names to the user so they can check everything is ok
+print("Categories: ", end = " ")
+for i in columns:
+    print(i, end = " ")
+print()
+
+#the way the sheet is designed, the items after column 4 are the categories
 
 #while loop for user to enter category for post
 while True:
@@ -59,6 +66,8 @@ print("Demo message sent")
 # 'Server ID' and [category] column respectively.
 col1 = "Server ID"
 for ind in df.index:
-    inCategory = df[category][ind]
+    inCategory = df[category][ind] #whether or not a server is in that category
+    platform = df["Platform"][ind] #which platform to post
     if(inCategory):
         print(df[col1][ind], inCategory) #display given server ID only if it's in that given category
+        print(platform) #which platform to post on
