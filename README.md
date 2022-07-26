@@ -5,6 +5,15 @@ Import/Read Google Sheet in Python: https://www.youtube.com/watch?v=t6WSY9D_ORQ
 Get column names in Pandas Dataframe: https://www.geeksforgeeks.org/how-to-get-column-names-in-pandas-dataframe/
 Iterating over rows in Pandas Dataframe: https://www.geeksforgeeks.org/different-ways-to-iterate-over-rows-in-pandas-dataframe/
 
+## Create a file it it doesn't exist using touch()
+https://appdividend.com/2022/03/15/how-to-create-file-if-not-exist/#:~:text=Create%20File%20if%20it%20does%20not%20exist%20using%20the%20touch()
+
+## Reading from File
+https://www.pythontutorial.net/python-basics/python-read-text-file/
+
+## System Exit
+https://www.geeksforgeeks.org/python-exit-commands-quit-exit-sys-exit-and-os-_exit/
+
 ## Posting on Social Apps via Python
 Post on Discord using Python Requests: https://www.youtube.com/watch?v=DArlLAq56Mo
 
