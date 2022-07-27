@@ -66,11 +66,25 @@ print("Demo message sent")
 fileInput = "message.txt" #message.txt is where you type your message to send. it is in the gitignore so it isn't pushed to the public repo
 from pathlib import Path
 
-fle = Path(fileInput)
-fle.touch(exist_ok=True)
-print("File setup complete.")
-print("Type the message you want to send in message.txt.")
-while True:
+while(True):
+    fle = Path(fileInput)
+    fle.touch(exist_ok=True)
+    print("File setup complete.")
+    print("Type the message you want to send in message.txt.")
+    while True:
+        status = input("Type 'done' when finished, or type 'exit' to exit the program. ")
+        if status == "done":
+            print("Message complete")
+            break
+        elif status == "exit":
+            print("Quitting program")
+            quit()
+            
+
+    output = open(fileInput, "r") #r is read
+    text = output.read() #get text to send from file
+    makeMessage(text, demo_id) #send another demo message with the message you made
+    print("The message you drafted has been sent to the demo server id. Please inspect it and correct it if need be.")
     status = input("Type 'done' when finished, or type 'exit' to exit the program. ")
     if status == "done":
         print("Message complete")
@@ -78,12 +92,6 @@ while True:
     elif status == "exit":
         print("Quitting program")
         quit()
-        
-
-output = open(fileInput, "r") #r is read
-text = output.read() #get text to send from file
-makeMessage(text, demo_id) #send another demo message with the message you made
-print("The message you drafted has been sent to the demo server id. Please inspect it and correct it if need be.")
 
 # iterate through each row and select
 # 'Server ID' and [category] column respectively.
