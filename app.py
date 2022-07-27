@@ -99,6 +99,9 @@ col1 = "Server ID"
 for ind in df.index:
     inCategory = df[category][ind] #whether or not a server is in that category
     platform = df["Platform"][ind] #which platform to post
+    serverID = str(df[col1][ind]) #server ID from channel of server of given platform
     if(inCategory):
-        print(df[col1][ind], inCategory) #display given server ID only if it's in that given category
-        print(platform) #which platform to post on
+        print(serverID, inCategory) #display given server ID only if it's in that given category
+        #print(platform) #which platform to post on
+        if(platform.lower()=="discord"):
+            makeMessage(text, serverID)
